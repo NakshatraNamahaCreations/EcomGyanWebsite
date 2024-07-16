@@ -29,9 +29,12 @@ const CombinedComponent = () => {
     }
 
     try {
-      const res = await axios.get(`http://localhost:8082/api/amazon/keyword`, {
-        params: { keywords },
-      });
+      const res = await axios.get(
+        `https://api.proleverage.io/api/amazon/keyword`,
+        {
+          params: { keywords },
+        }
+      );
 
       if (res.status === 200) {
         setTotaSearchvolume(res.data.googleTrendsData);
