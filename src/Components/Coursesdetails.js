@@ -19,7 +19,7 @@ function Coursesdetails() {
   const getallCoursesModule = async () => {
     try {
       const response = await axios.get(
-        `https://api.proleverage.io/api/coursemodule/getmodulesbyid/${courseData._id}`
+        `http://localhost:8081/api/coursemodule/getmodulesbyid/${courseData._id}`
       );
       if (response.status === 200) {
         setgetallmodule(response.data.data);
@@ -44,7 +44,7 @@ function Coursesdetails() {
 
           <img
             className="courseCardImage-0-1-334"
-            src={`https://api.proleverage.io/course/${courseData.thumbnailImage}`}
+            src={`http://localhost:8081/course/${courseData.thumbnailImage}`}
             alt=""
             style={{ width: "100%", height: "250px", borderRadius: "8px" }}
           />
